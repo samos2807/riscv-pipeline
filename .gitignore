@@ -1,0 +1,29 @@
+# Vivado
+*.jou
+*.log
+*.pb
+*.str
+.Xil/
+vivado_project/
+workspace/
+sim/xsim.dir/
+sim/*.log
+sim/*.pb
+sim/*.jou
+
+# Synthesis outputs (large files)
+syn_output/
+*.enc
+*.enc.dat
+*.gds
+*.sdf
+
+# Cadence
+*.cmd
+*.cmd1
+*.logv
+innovus_temp_*
+
+# OS
+.DS_Store
+Thumbs.db
