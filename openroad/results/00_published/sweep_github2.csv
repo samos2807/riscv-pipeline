@@ -1,0 +1,3 @@
+target_period_ns,period_min_ns,fmax_mhz,wns_ns,tns_ns,setup_viol,hold_viol,design_area_um2,seq_cells,total_power_w,status,runtime_s
+1.60,1.58,632.87,0.00,0.00,0,0,32700,3446,2.55e-02,OK,614
+1.55,1.54,648.05,0.00,0.00,0,0,32808,3446,2.65e-02,OK,605
