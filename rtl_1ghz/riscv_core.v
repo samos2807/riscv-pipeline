@@ -127,10 +127,8 @@ reg  [31:0] ex_mem_redirect_pc;
 // ----- MEM/WB -----
 // Control
 reg         mem_wb_reg_write;
-reg         mem_wb_mem_to_reg;
 // Data
-reg  [31:0] mem_wb_alu_result;
-reg  [31:0] mem_wb_mem_data;
+reg  [31:0] mem_wb_wb_data;    // Fix C: write-back value, already selected in MEM
 reg  [4:0]  mem_wb_rd;
 
 // =============================================
@@ -382,7 +380,7 @@ alu u_alu (
 );
 
 // Test output
-assign alu_out_test = alu_result;
+assign alu_out_test = ex_mem_alu_result;   // Fix D: observe the EX/MEM flop (same value, 1 cycle later) so the pin is a flop-to-port path, not the raw ALU output
 
 // =============================================
 // EX/MEM Pipeline Register
@@ -442,15 +440,16 @@ dmem u_dmem (
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         mem_wb_reg_write  <= 1'b0;
-        mem_wb_mem_to_reg <= 1'b0;
-        mem_wb_alu_result <= 32'b0;
-        mem_wb_mem_data   <= 32'b0;
+        mem_wb_wb_data    <= 32'b0;
         mem_wb_rd         <= 5'b0;
     end else begin
         mem_wb_reg_write  <= ex_mem_reg_write;
-        mem_wb_mem_to_reg <= ex_mem_mem_to_reg;
-        mem_wb_alu_result <= ex_mem_alu_result;
-        mem_wb_mem_data   <= mem_read_data;
+        // Fix C: choose the write-back value here, in MEM, instead of in WB.
+        // MEM/WB then holds the final value, so the EX forwarding muxes, the
+        // register-file write port and its write-first bypass all see a flop
+        // output rather than a mux fed by mem_wb_mem_to_reg. This also drops
+        // 32 flops (one data register instead of two) and the mem_to_reg flop.
+        mem_wb_wb_data    <= ex_mem_mem_to_reg ? mem_read_data : ex_mem_alu_result;
         mem_wb_rd         <= ex_mem_rd;
     end
 end
@@ -458,6 +457,6 @@ end
 // =============================================
 // WB Stage
 // =============================================
-assign wb_data = mem_wb_mem_to_reg ? mem_wb_mem_data : mem_wb_alu_result;
+assign wb_data = mem_wb_wb_data;   // Fix C: no mux in WB
 
 endmodule
