@@ -1,0 +1,2 @@
+target_period_ns,period_min_ns,fmax_mhz,wns_ns,tns_ns,setup_viol,hold_viol,reg2reg_slack_ns,design_area_um2,seq_cells,total_power_w,status,runtime_s
+1.05,1.03,969.28,0.00,0.00,0,0,0.02,24865,3413,2.21e-02,OK,2459
