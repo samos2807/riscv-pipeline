@@ -107,6 +107,12 @@ reg  [4:0]  id_ex_rs2;
 reg  [4:0]  id_ex_rd;
 reg  [1:0]  id_ex_forward_a;
 reg  [1:0]  id_ex_forward_b;
+// Fix F2: one-hot operand selects, decided in ID and registered, so each ALU
+// input is an AND-OR mux (two gate levels) instead of a chain of 2:1 muxes in
+// front of the adder. Bit order: [0] = register-file value, [1] = MEM/WB
+// write-back, [2] = EX/MEM ALU result, [3] = immediate (B only).
+reg  [2:0]  id_ex_sel_a;
+reg  [3:0]  id_ex_sel_b;
 // ALU decoder fields
 reg  [2:0]  id_ex_funct3;
 reg         id_ex_funct7_5;
@@ -282,6 +288,8 @@ always @(posedge clk or negedge rst_n) begin
         id_ex_rd        <= 5'b0;
         id_ex_forward_a <= 2'b00;
         id_ex_forward_b <= 2'b00;
+        id_ex_sel_a     <= 3'b001;
+        id_ex_sel_b     <= 4'b0001;
         id_ex_funct3    <= 3'b0;
         id_ex_funct7_5  <= 1'b0;
         id_ex_op_5      <= 1'b0;
@@ -303,6 +311,8 @@ always @(posedge clk or negedge rst_n) begin
         id_ex_rd        <= 5'b0;
         id_ex_forward_a <= 2'b00;
         id_ex_forward_b <= 2'b00;
+        id_ex_sel_a     <= 3'b001;
+        id_ex_sel_b     <= 4'b0001;
         id_ex_funct3    <= 3'b0;
         id_ex_funct7_5  <= 1'b0;
         id_ex_op_5      <= 1'b0;
@@ -323,6 +333,13 @@ always @(posedge clk or negedge rst_n) begin
         id_ex_rd        <= rd;
         id_ex_forward_a <= next_forward_a;
         id_ex_forward_b <= next_forward_b;
+        // Fix F2: same priority as the forwarding codes, as one-hot; an
+        // immediate overrides forwarding for the ALU's B input only.
+        id_ex_sel_a     <= (next_forward_a == 2'b10) ? 3'b100 :
+                           (next_forward_a == 2'b01) ? 3'b010 : 3'b001;
+        id_ex_sel_b     <= alu_src                   ? 4'b1000 :
+                           (next_forward_b == 2'b10) ? 4'b0100 :
+                           (next_forward_b == 2'b01) ? 4'b0010 : 4'b0001;
         id_ex_funct3    <= funct3;
         id_ex_funct7_5  <= funct7[5];
         id_ex_op_5      <= opcode[5];
@@ -333,17 +350,24 @@ end
 // EX Stage
 // =============================================
 
-// Forwarding muxes
-assign alu_input_a = (id_ex_forward_a == 2'b10) ? ex_mem_alu_result :
-                     (id_ex_forward_a == 2'b01) ? wb_data :
-                     id_ex_rd1;
+// Fix F2: ALU operands as one-hot AND-OR muxes on registered selects. The
+// old form (nested ?: on 2-bit codes, then the alu_src mux) synthesized to
+// three MUX2 levels in series ahead of the adder -- the critical path once
+// the branch compare was taken off it (Fix E).
+assign alu_input_a = ({32{id_ex_sel_a[2]}} & ex_mem_alu_result) |
+                     ({32{id_ex_sel_a[1]}} & wb_data)           |
+                     ({32{id_ex_sel_a[0]}} & id_ex_rd1);
 
+assign alu_input_b = ({32{id_ex_sel_b[3]}} & id_ex_imm)         |
+                     ({32{id_ex_sel_b[2]}} & ex_mem_alu_result) |
+                     ({32{id_ex_sel_b[1]}} & wb_data)           |
+                     ({32{id_ex_sel_b[0]}} & id_ex_rd2);
+
+// Store data (and the Fix E branch compare) still use the plain forwarded
+// rs2; this path ends in a register, not the adder, and is not critical.
 assign forwarded_rs2 = (id_ex_forward_b == 2'b10) ? ex_mem_alu_result :
                         (id_ex_forward_b == 2'b01) ? wb_data :
                         id_ex_rd2;
-
-// ALU source mux: immediate or forwarded rs2
-assign alu_input_b = id_ex_alu_src ? id_ex_imm : forwarded_rs2;
 
 // Branch target and decision
 assign branch_target   = id_ex_pc + id_ex_imm;
