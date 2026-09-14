@@ -45,6 +45,7 @@ wire [1:0]  alu_op;
 wire [3:0]  alu_ctrl;
 wire [31:0] alu_result;
 wire        alu_zero;
+wire        br_eq;         // Fix E: dedicated branch equality compare
 wire [31:0] alu_input_a;
 wire [31:0] alu_input_b;
 wire [31:0] forwarded_rs2;
@@ -358,7 +359,13 @@ assign ex_correct_pc   = id_ex_pred_taken ? id_ex_pc_plus_4 : branch_target;
 // ends at a register (Fix B) rather than driving the PC mux directly.
 // Suppressed while an older redirect is landing: the instruction in EX is
 // wrong-path and must not raise a second, competing redirect.
-assign ex_mispredict   = id_ex_branch & (alu_zero ^ id_ex_pred_taken)
+// Fix E: BEQ is the only branch this core implements, so the taken decision
+// is just rs1 == rs2. Compare the forwarded operands directly instead of
+// going through the ALU subtractor and the 32-bit zero-detect of its
+// result (~1.0 ns of the cycle). alu_zero is left connected but is no
+// longer on the redirect path.
+assign br_eq           = (alu_input_a == forwarded_rs2);
+assign ex_mispredict   = id_ex_branch & (br_eq ^ id_ex_pred_taken)
                                       & ~ex_mem_redirect;
 
 // ALU Decoder

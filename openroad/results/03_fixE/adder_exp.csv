@@ -1,0 +1,4 @@
+variant,target_period_ns,period_min_ns,fmax_mhz,wns_ns,tns_ns,setup_viol,hold_viol,reg2reg_slack_ns,design_area_um2,seq_cells,total_power_w,status,runtime_s
+noadder,1.00,1.08,925.22,-0.08,-0.64,11,0,-0.08,33393,3441,3.98e-02,TIMING_VIOL,683
+abc850,1.00,1.04,960.93,-0.04,-0.34,12,0,-0.04,33225,3441,4.08e-02,TIMING_VIOL,547
+both,1.00,1.08,925.22,-0.08,-0.64,11,0,-0.08,33393,3441,3.98e-02,TIMING_VIOL,552
