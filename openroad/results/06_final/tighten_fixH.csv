@@ -1,0 +1,3 @@
+core_util,target_period_ns,period_min_ns,fmax_mhz,wns_ns,tns_ns,setup_viol,hold_viol,reg2reg_slack_ns,design_area_um2,seq_cells,total_power_w,status,runtime_s
+76,1.00,0.99,1007.55,0.00,0.00,0,0,0.01,24770,3413,2.09e-02,OK,1802
+82,1.00,,,,,,,,,,,FLOW_FAIL,1806
