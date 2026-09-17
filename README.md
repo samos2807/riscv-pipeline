@@ -13,7 +13,9 @@ two complete physical design flows:
 |---|---|---|
 | Fmax, clean | 648.05 MHz | **1008.38 MHz** (+55.6 %) |
 | standard-cell area | 32,808 µm² | **24,931 µm²** (−24.0 %) |
-| die | 416.7 × 416.7 µm | 355.0 × 355.0 µm (−27.4 %) |
+| die (DEF units are 2000 per µm) | 208.4 × 208.4 µm | 177.5 × 177.5 µm (−27.4 %) |
+| post-route utilization | 77 % | 81 % |
+| instances (no fill) | 10,444 | 6,570 |
 | power (default activity) | 26.5 mW @ 648 MHz | **21.1 mW @ 1008 MHz** (−20.4 %) |
 | energy per cycle | 40.9 pJ | 20.9 pJ (−49 %) |
 | setup / hold / max-cap / slew / fanout violations | 0 / 0 / 0 / 0 / 0 | 0 / 0 / 0 / 0 / 0 |

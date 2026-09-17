@@ -52,7 +52,7 @@ today and diffed against /rtl/rtl_github and /rtl/rtl_pipelined/*.orig: zero dif
 | Fmax clean | 648.05 MHz | 1007.55 MHz | +55.5% |
 | target period | 1.55 ns | 1.00 ns | |
 | cell area (Design area) | 32808 um2 | 24770 um2 | -24.5% |
-| die (DIEAREA) | 416.74 x 416.74 um | 354.98 x 354.98 um | -27.5% |
+| die (DIEAREA, DEF units 2000/um; an earlier version of this table read them as 1000/um) | 208.37 x 208.37 um | 177.49 x 177.49 um | -27.5% |
 | synthesis chip area | 32368 um2 | 23405 um2 | -27.7% |
 | flip-flops | 3446 (3072 DFF + 371 DFFR + 3 DFFS) | 3413 + 95 CLKGATE | |
 | power | 26.5 mW @ 648 MHz | 20.9 mW @ 1008 MHz | -21% |
@@ -154,7 +154,7 @@ forwarding, same ISA".
 - **Final run** (riscv_final, 1.00 ns, util 76, CAP_MARGIN 30 + hook), post-route
   with extracted parasitics: 1008.38 MHz, wns 0.00, worst setup slack +0.01, worst hold
   +0.07, max-cap slack +0.011 fF, max-slew slack +0.39, 0 violators of any type,
-  0 DRC, 0 antenna, cell area 24931 um2 (81 percent utilization), die 354.98 um,
+  0 DRC, 0 antenna, cell area 24931 um2 (81 percent utilization), die 177.49 um (DEF units 2000/um),
   power 21.1 mW (seq 7.95 / comb 10.9 / clock 2.30), 3413 flops + 95 CLKGATE_X1,
   critical path id_ex_sel_b[2] -> adder -> ex_mem_alu_result[27], 20 data-path cells.
   vs published RTL: +55.6 percent fmax, -24.0 percent cell area, -27.4 percent die,
