@@ -75,7 +75,9 @@ Technology: GPDK045, gsclib045 SVT.
 No architectural change: same 5-stage pipeline, same forwarding paths, same ISA. Only
 the way the logic is implemented may change. One exception, disclosed: round 1 adds a
 static backward-taken / forward-not-taken branch predictor and registers the branch
-redirect, which changes the mispredict penalty from 2 to 3 cycles. IPC was not measured.
+redirect, which changes the mispredict penalty from 2 to 3 cycles. Cycle counts were
+compared on one program only, the backward-branch loop of `tb/riscv_pipe_tb.v`: 111
+cycles on the published RTL, 92 after round 1. No CPI measurement over a wider workload.
 
 ### The method
 
