@@ -1,0 +1,232 @@
+PI_TAG published
+=== PINS (name master x y)
+PIN u_pc.pc_out[20]$_DFFE_PN0N_/D DFFR_X1 5.32 195.30
+PIN _20377_/ZN AOI22_X1 7.70 195.30
+PIN _20377_/A2 AOI22_X1 7.70 195.30
+PIN _20374_/Z MUX2_X1 9.03 195.30
+PIN _20374_/S MUX2_X1 9.03 195.30
+PIN place1051/Z BUF_X16 17.57 189.70
+PIN place1051/A BUF_X16 17.57 189.70
+PIN rebuffer1882/Z BUF_X4 16.43 188.30
+PIN rebuffer1882/A BUF_X4 16.43 188.30
+PIN _17456_/ZN NOR2_X4 39.42 188.30
+PIN _17456_/A2 NOR2_X4 39.42 188.30
+PIN _17455_/ZN NAND4_X4 49.78 199.50
+PIN _17455_/A3 NAND4_X4 49.78 199.50
+PIN _17453_/ZN NOR4_X4 65.74 199.50
+PIN _17453_/A3 NOR4_X4 65.74 199.50
+PIN _14810_/ZN OAI21_X1 68.97 198.10
+PIN _14810_/B1 OAI21_X1 68.97 198.10
+PIN _14809_/Z XOR2_X1 69.16 188.30
+PIN _14809_/B XOR2_X1 69.16 188.30
+PIN _14808_/ZN AOI221_X1 70.49 188.30
+PIN _14808_/B1 AOI221_X1 70.49 188.30
+PIN place1073/Z BUF_X1 70.78 191.10
+PIN place1073/A BUF_X1 70.78 191.10
+PIN _14630_/ZN AOI22_X1 86.73 192.50
+PIN _14630_/B2 AOI22_X1 86.73 192.50
+PIN _14629_/ZN AOI221_X1 91.01 184.10
+PIN _14629_/B1 AOI221_X1 91.01 184.10
+PIN _14623_/ZN OAI21_X1 99.75 170.10
+PIN _14623_/A OAI21_X1 99.75 170.10
+PIN _14618_/ZN AND3_X1 98.70 170.10
+PIN _14618_/A3 AND3_X1 98.70 170.10
+PIN _14617_/ZN AOI21_X1 98.04 175.70
+PIN _14617_/B2 AOI21_X1 98.04 175.70
+PIN _24546_/S HA_X1 96.14 175.70
+PIN _24546_/B HA_X1 96.14 175.70
+PIN _14290_/ZN XNOR2_X1 94.43 172.90
+PIN _14290_/B XNOR2_X1 94.43 172.90
+PIN _14289_/ZN OAI21_X1 90.63 168.70
+PIN _14289_/B2 OAI21_X1 90.63 168.70
+PIN rebuffer1615/Z BUF_X1 90.72 164.50
+PIN rebuffer1615/A BUF_X1 90.72 164.50
+PIN _14226_/ZN INV_X2 89.97 161.70
+PIN _14226_/A INV_X2 89.97 161.70
+PIN _24559_/CO HA_X1 88.92 158.90
+PIN _24559_/A HA_X1 88.92 158.90
+PIN _14264_/ZN OAI21_X2 84.27 158.90
+PIN _14264_/B1 OAI21_X2 84.27 158.90
+PIN _14263_/Z MUX2_X1 82.94 149.10
+PIN _14263_/B MUX2_X1 82.94 149.10
+PIN _14262_/ZN NOR2_X1 78.75 146.30
+PIN _14262_/A2 NOR2_X1 78.75 146.30
+PIN _14129_/ZN NOR3_X2 83.50 146.30
+PIN _14129_/A1 NOR3_X2 83.50 146.30
+PIN rebuffer1606/Z BUF_X2 83.98 144.90
+PIN rebuffer1606/A BUF_X2 83.98 144.90
+PIN rebuffer1632/Z BUF_X4 59.38 140.70
+PIN rebuffer1632/A BUF_X4 59.38 140.70
+PIN _14034_/ZN OAI221_X2 58.99 139.30
+PIN _14034_/C2 OAI221_X2 58.99 139.30
+PIN _14033_/ZN OR4_X4 53.48 137.90
+PIN _14033_/A4 OR4_X4 53.48 137.90
+PIN rebuffer1599/Z BUF_X2 57.00 136.50
+PIN rebuffer1599/A BUF_X2 57.00 136.50
+PIN mem_wb_rd[1]$_DFF_PN0_/Q DFFR_X1 50.16 133.70
+PIN mem_wb_rd[1]$_DFF_PN0_/CK DFFR_X1 50.16 133.70
+PIN clkbuf_leaf_24_clk/Z CLKBUF_X3 41.90 137.90
+PIN clkbuf_leaf_24_clk/A CLKBUF_X3 41.90 137.90
+PIN clkbuf_4_8_0_clk/Z CLKBUF_X3 51.59 129.50
+PIN clkbuf_4_8_0_clk/A CLKBUF_X3 51.59 129.50
+PIN clkbuf_0_clk/Z CLKBUF_X3 104.59 104.30
+PIN clkbuf_0_clk/A CLKBUF_X3 104.59 104.30
+PIN clk PORT - -
+=== NETS driven along the path
+NET _00426_
+NET _06745_
+NET net1051
+NET net1882
+NET _04032_
+NET _04031_
+NET _04029_
+NET net44
+NET _08510_
+NET _08509_
+NET net1073
+NET _08354_
+NET _08353_
+NET _08347_
+NET _08342_
+NET _08341_
+NET _00255_
+NET _00253_
+NET _08047_
+NET net1615
+NET _07997_
+NET _00288_
+NET _00287_
+NET forwarded_rs2\[1\]
+NET _08028_
+NET _07907_
+NET net1606
+NET net1632
+NET _07814_
+NET _07813_
+NET net1599
+NET mem_wb_rd\[1\]
+NET clknet_leaf_24_clk
+NET clknet_4_8_0_clk
+NET clknet_0_clk
+=== WITH SPEF
+Startpoint: mem_wb_rd[1]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_pc.pc_out[20]$_DFFE_PN0N_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.223    0.223   clock network delay (propagated)
+                   0.022    0.000    0.223 ^ mem_wb_rd[1]$_DFF_PN0_/CK (DFFR_X1)
+     5   15.508    0.019    0.113    0.335 v mem_wb_rd[1]$_DFF_PN0_/Q (DFFR_X1)
+     2    5.159    0.006    0.033    0.368 v rebuffer1599/Z (BUF_X2)
+     2    4.816    0.015    0.105    0.473 v _14033_/ZN (OR4_X4)
+     1    3.556    0.037    0.039    0.512 ^ _14034_/ZN (OAI221_X2)
+     4   19.456    0.014    0.034    0.546 ^ rebuffer1632/Z (BUF_X4)
+     1    3.656    0.007    0.025    0.571 ^ rebuffer1606/Z (BUF_X2)
+     2    3.795    0.008    0.009    0.580 v _14129_/ZN (NOR3_X2)
+     1    1.749    0.016    0.028    0.608 ^ _14262_/ZN (NOR2_X1)
+     2    5.480    0.016    0.048    0.656 ^ _14263_/Z (MUX2_X1)
+     2    4.895    0.024    0.018    0.675 v _14264_/ZN (OAI21_X2)
+     2    4.091    0.008    0.040    0.715 v _24559_/CO (HA_X1)
+     2    8.415    0.012    0.019    0.733 ^ _14226_/ZN (INV_X2)
+     2    3.712    0.011    0.028    0.761 ^ rebuffer1615/Z (BUF_X1)
+     1    3.305    0.019    0.020    0.782 v _14289_/ZN (OAI21_X1)
+     1    3.817    0.018    0.048    0.830 v _14290_/ZN (XNOR2_X1)
+     2    2.533    0.012    0.061    0.891 v _24546_/S (HA_X1)
+     3    7.023    0.045    0.059    0.950 ^ _14617_/ZN (AOI21_X1)
+     1    1.823    0.011    0.050    1.000 ^ _14618_/ZN (AND3_X1)
+     3    8.712    0.025    0.033    1.034 v _14623_/ZN (OAI21_X1)
+     3    7.129    0.079    0.119    1.153 ^ _14629_/ZN (AOI221_X1)
+     2    4.950    0.025    0.044    1.197 v _14630_/ZN (AOI22_X1)
+     1    1.827    0.006    0.035    1.232 v place1073/Z (BUF_X1)
+     1    2.589    0.048    0.076    1.308 ^ _14808_/ZN (AOI221_X1)
+     1    2.458    0.025    0.057    1.365 ^ _14809_/Z (XOR2_X1)
+     2    6.878    0.028    0.030    1.395 v _14810_/ZN (OAI21_X1)
+     1    7.459    0.045    0.086    1.481 ^ _17453_/ZN (NOR4_X4)
+     2   12.307    0.022    0.043    1.524 v _17455_/ZN (NAND4_X4)
+     3   19.806    0.030    0.050    1.574 ^ _17456_/ZN (NOR2_X4)
+     1   12.634    0.010    0.031    1.605 ^ rebuffer1882/Z (BUF_X4)
+    33   67.386    0.011    0.026    1.631 ^ place1051/Z (BUF_X16)
+     1    1.558    0.010    0.065    1.696 v _20374_/Z (MUX2_X1)
+     1    1.554    0.024    0.035    1.731 ^ _20377_/ZN (AOI22_X1)
+                   0.024    0.000    1.732 ^ u_pc.pc_out[20]$_DFFE_PN0N_/D (DFFR_X1)
+                                     1.732   data arrival time
+
+                            1.550    1.550   clock core_clock (rise edge)
+                            0.223    1.773   clock network delay (propagated)
+                            0.000    1.773   clock reconvergence pessimism
+                                     1.773 ^ u_pc.pc_out[20]$_DFFE_PN0N_/CK (DFFR_X1)
+                           -0.035    1.738   library setup time
+                                     1.738   data required time
+---------------------------------------------------------------------------------
+                                     1.738   data required time
+                                    -1.732   data arrival time
+---------------------------------------------------------------------------------
+                                     0.007   slack (MET)
+
+
+=== ZERO WIRE RC (placement estimate with R=C=0)
+Startpoint: mem_wb_rd[1]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_pc.pc_out[20]$_DFFE_PN0N_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.223    0.223   clock network delay (propagated)
+                   0.022    0.000    0.223 ^ mem_wb_rd[1]$_DFF_PN0_/CK (DFFR_X1)
+     5   15.508    0.019    0.113    0.335 v mem_wb_rd[1]$_DFF_PN0_/Q (DFFR_X1)
+     2    5.159    0.006    0.033    0.368 v rebuffer1599/Z (BUF_X2)
+     2    4.816    0.015    0.105    0.473 v _14033_/ZN (OR4_X4)
+     1    3.556    0.037    0.039    0.512 ^ _14034_/ZN (OAI221_X2)
+     4   19.456    0.014    0.034    0.546 ^ rebuffer1632/Z (BUF_X4)
+     1    3.656    0.007    0.025    0.571 ^ rebuffer1606/Z (BUF_X2)
+     2    3.795    0.008    0.009    0.580 v _14129_/ZN (NOR3_X2)
+     1    1.749    0.016    0.028    0.608 ^ _14262_/ZN (NOR2_X1)
+     2    5.480    0.016    0.048    0.656 ^ _14263_/Z (MUX2_X1)
+     2    4.895    0.024    0.018    0.675 v _14264_/ZN (OAI21_X2)
+     2    4.091    0.008    0.040    0.715 v _24559_/CO (HA_X1)
+     2    8.415    0.012    0.019    0.733 ^ _14226_/ZN (INV_X2)
+     2    3.712    0.011    0.028    0.761 ^ rebuffer1615/Z (BUF_X1)
+     1    3.305    0.019    0.020    0.782 v _14289_/ZN (OAI21_X1)
+     1    3.817    0.018    0.048    0.830 v _14290_/ZN (XNOR2_X1)
+     2    2.533    0.012    0.061    0.891 v _24546_/S (HA_X1)
+     3    7.023    0.045    0.059    0.950 ^ _14617_/ZN (AOI21_X1)
+     1    1.823    0.011    0.050    1.000 ^ _14618_/ZN (AND3_X1)
+     3    8.712    0.025    0.033    1.034 v _14623_/ZN (OAI21_X1)
+     3    7.129    0.079    0.119    1.153 ^ _14629_/ZN (AOI221_X1)
+     2    4.950    0.025    0.044    1.197 v _14630_/ZN (AOI22_X1)
+     1    1.827    0.006    0.035    1.232 v place1073/Z (BUF_X1)
+     1    2.589    0.048    0.076    1.308 ^ _14808_/ZN (AOI221_X1)
+     1    2.458    0.025    0.057    1.365 ^ _14809_/Z (XOR2_X1)
+     2    6.878    0.028    0.030    1.395 v _14810_/ZN (OAI21_X1)
+     1    7.459    0.045    0.086    1.481 ^ _17453_/ZN (NOR4_X4)
+     2   12.307    0.022    0.043    1.524 v _17455_/ZN (NAND4_X4)
+     3   19.806    0.030    0.050    1.574 ^ _17456_/ZN (NOR2_X4)
+     1   12.634    0.010    0.031    1.605 ^ rebuffer1882/Z (BUF_X4)
+    33   67.386    0.011    0.026    1.631 ^ place1051/Z (BUF_X16)
+     1    1.558    0.010    0.065    1.696 v _20374_/Z (MUX2_X1)
+     1    1.554    0.024    0.035    1.731 ^ _20377_/ZN (AOI22_X1)
+                   0.024    0.000    1.732 ^ u_pc.pc_out[20]$_DFFE_PN0N_/D (DFFR_X1)
+                                     1.732   data arrival time
+
+                            1.550    1.550   clock core_clock (rise edge)
+                            0.223    1.773   clock network delay (propagated)
+                            0.000    1.773   clock reconvergence pessimism
+                                     1.773 ^ u_pc.pc_out[20]$_DFFE_PN0N_/CK (DFFR_X1)
+                           -0.035    1.738   library setup time
+                                     1.738   data required time
+---------------------------------------------------------------------------------
+                                     1.738   data required time
+                                    -1.732   data arrival time
+---------------------------------------------------------------------------------
+                                     0.007   slack (MET)
+
+

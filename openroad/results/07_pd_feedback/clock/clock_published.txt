@@ -1,0 +1,42 @@
+CR_TAG published
+=== report_clock_skew -setup
+Clock core_clock
+  0.228 source latency mem_wb_mem_data[25]$_DFF_PN0_/CK ^
+ -0.217 target latency u_regfile.rf[27][25]$_DFFE_PP_/CK ^
+  0.000 CRPR
+--------------
+  0.010 setup skew
+
+=== report_clock_skew -hold
+Clock core_clock
+  0.228 source latency mem_wb_mem_data[25]$_DFF_PN0_/CK ^
+ -0.217 target latency u_regfile.rf[27][25]$_DFFE_PP_/CK ^
+  0.000 CRPR
+--------------
+  0.010 hold skew
+
+=== report_clock_latency
+Clock core_clock
+rise -> rise
+    min     max
+  0.000   0.000 source latency
+  0.217         network latency u_regfile.rf[24][5]$_DFFE_PP_/CK
+          0.228 network latency u_dmem.ram[11][1]$_DFFE_PP_/CK
+---------------
+  0.217   0.228 latency
+          0.011 skew
+
+fall -> fall
+    min     max
+  0.000   0.000 source latency
+  0.228         network latency u_regfile.rf[24][5]$_DFFE_PP_/CK
+          0.239 network latency u_dmem.ram[11][1]$_DFFE_PP_/CK
+---------------
+  0.228   0.239 latency
+          0.011 skew
+
+
+=== report_clock_min_period
+core_clock period_min = 1.54 fmax = 648.05
+=== sinks: flops 3446 icg 0
+=== wrote 3884 endpoint capture latencies to /rtl/best_final_1ghz/reports/clock/latency_published.txt

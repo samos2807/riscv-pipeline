@@ -137,6 +137,18 @@ through the forwarding compare, the ALU and the branch loop to `pc` (the path Pa
 documented); after round 1, 27 cells `mem_wb_mem_to_reg → ex_mem_redirect`; final,
 20 cells `id_ex_sel_b → ALU adder → ex_mem_alu_result`, 1.21 ns, +0.01 ns slack.
 
+### PD feedback follow-up (October 2026)
+
+Five questions from a physical-design review, each answered from the reports:
+
+| question | answer | where |
+|---|---|---|
+| leakage vs dynamic, before / after | leakage 0.57 → 0.49 mW (−15 %, 2 % of total); dynamic at the same 1.55 ns clock 25.9 → 15.9 mW (−39 %) | [POWER_SPLIT.md](openroad/results/06_final/POWER_SPLIT.md) |
+| clock tree picture, skew and latency numbers | published: 449 buffers, 11 ps skew; final: 901 buffers, 51 ps flop-to-flop skew, ICGs at 0.13–0.15 ns, flops at 0.25–0.30 ns | [CLOCK_TREE.md](openroad/results/07_pd_feedback/clock/CLOCK_TREE.md), [clock_side_by_side.png](openroad/images/clock_side_by_side.png) |
+| critical path picture, clock vs data coloured | zoomed and captioned; path breakdown by cell family: adder = 78 % of the data path | [critical_path_zoom.png](openroad/images/critical_path_zoom.png), [CRITICAL_PATH_ROUTING.md](openroad/results/07_pd_feedback/path/CRITICAL_PATH_ROUTING.md) |
+| manual high-metal routing skeleton for the critical path | wire RC is 41 ps of the 948 ps data path (4 %); NDR on the 19 critical nets recovered 10 ps, Fmax +0.4 %, next adder bit takes over | same file, section 4 |
+| clock mesh / grid | not synthesizable or timeable in this flow (tree-only CTS, no multi-driver STA); measured skew is 1–5 % of the period | same file, section 5 |
+
 ### Verification
 
 `verif/` holds a generic testbench that dumps the full architectural state and the

@@ -1,0 +1,184 @@
+PI_TAG final
+=== PINS (name master x y)
+PIN ex_mem_alu_result[27]$_DFF_PN0_/D DFFR_X1 67.64 139.30
+PIN _11900_/ZN OAI22_X1 64.69 137.90
+PIN _11900_/A2 OAI22_X1 64.69 137.90
+PIN _11895_/Z XOR2_X1 64.98 135.10
+PIN _11895_/B XOR2_X1 64.98 135.10
+PIN _11894_/ZN AOI21_X1 67.07 135.10
+PIN _11894_/B1 AOI21_X1 67.07 135.10
+PIN _11893_/ZN AND2_X1 64.98 132.30
+PIN _11893_/A2 AND2_X1 64.98 132.30
+PIN _11867_/ZN OAI21_X1 65.93 116.90
+PIN _11867_/A OAI21_X1 65.93 116.90
+PIN place643/Z BUF_X1 65.64 112.70
+PIN place643/A BUF_X1 65.64 112.70
+PIN _11749_/ZN AOI221_X2 68.50 112.70
+PIN _11749_/B1 AOI221_X2 68.50 112.70
+PIN _11740_/ZN NOR3_X4 67.83 111.30
+PIN _11740_/A2 NOR3_X4 67.83 111.30
+PIN _11737_/ZN INV_X2 70.39 109.90
+PIN _11737_/A INV_X2 70.39 109.90
+PIN _15282_/S HA_X1 71.82 114.10
+PIN _15282_/B HA_X1 71.82 114.10
+PIN _09808_/ZN XNOR2_X1 70.30 116.90
+PIN _09808_/B XNOR2_X1 70.30 116.90
+PIN _09807_/ZN OAI21_X1 68.40 118.30
+PIN _09807_/B1 OAI21_X1 68.40 118.30
+PIN place657/Z BUF_X1 66.03 121.10
+PIN place657/A BUF_X1 66.03 121.10
+PIN _09486_/ZN OR2_X2 60.70 121.10
+PIN _09486_/A2 OR2_X2 60.70 121.10
+PIN _09485_/ZN OR4_X4 59.56 122.50
+PIN _09485_/A2 OR4_X4 59.56 122.50
+PIN _09461_/ZN OR4_X2 58.80 121.10
+PIN _09461_/A4 OR4_X2 58.80 121.10
+PIN _09460_/ZN NAND3_X2 59.56 129.50
+PIN _09460_/A2 NAND3_X2 59.56 129.50
+PIN _09457_/ZN AOI22_X2 61.27 130.90
+PIN _09457_/B1 AOI22_X2 61.27 130.90
+PIN place1006/Z BUF_X4 39.99 126.70
+PIN place1006/A BUF_X4 39.99 126.70
+PIN id_ex_sel_b[2]$_DFF_PN0_/Q DFFR_X1 37.24 126.70
+PIN id_ex_sel_b[2]$_DFF_PN0_/CK DFFR_X1 37.24 126.70
+PIN clkbuf_leaf_2_clk_regs/Z CLKBUF_X3 29.55 119.70
+PIN clkbuf_leaf_2_clk_regs/A CLKBUF_X3 29.55 119.70
+PIN clkbuf_1_0__f_clk_regs/Z CLKBUF_X3 22.70 130.90
+PIN clkbuf_1_0__f_clk_regs/A CLKBUF_X3 22.70 130.90
+PIN clkbuf_0_clk_regs/Z CLKBUF_X3 47.59 132.30
+PIN clkbuf_0_clk_regs/A CLKBUF_X3 47.59 132.30
+PIN clkbuf_regs_0_core_clock/Z CLKBUF_X3 51.97 132.30
+PIN clkbuf_regs_0_core_clock/A CLKBUF_X3 51.97 132.30
+PIN delaybuf_2_core_clock/Z CLKBUF_X3 55.38 143.50
+PIN delaybuf_2_core_clock/A CLKBUF_X3 55.38 143.50
+PIN delaybuf_1_core_clock/Z CLKBUF_X3 56.52 154.70
+PIN delaybuf_1_core_clock/A CLKBUF_X3 56.52 154.70
+PIN delaybuf_0_core_clock/Z CLKBUF_X3 59.95 165.90
+PIN delaybuf_0_core_clock/A CLKBUF_X3 59.95 165.90
+PIN clk PORT - -
+=== NETS driven along the path
+NET _00019_
+NET _03045_
+NET _03044_
+NET _03043_
+NET _03019_
+NET net643
+NET _02902_
+NET _02893_
+NET _02890_
+NET _00308_
+NET _00306_
+NET _01085_
+NET net657
+NET _00839_
+NET _00838_
+NET _00814_
+NET _00813_
+NET _00810_
+NET net1006
+NET id_ex_sel_b\[2\]
+NET clknet_leaf_2_clk_regs
+NET clknet_1_0__leaf_clk_regs
+NET clknet_0_clk_regs
+NET clk_regs
+NET delaynet_2_core_clock
+NET delaynet_1_core_clock
+NET delaynet_0_core_clock
+=== WITH SPEF
+Startpoint: id_ex_sel_b[2]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: ex_mem_alu_result[27]$_DFF_PN0_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.258    0.258   clock network delay (propagated)
+                   0.023    0.000    0.258 ^ id_ex_sel_b[2]$_DFF_PN0_/CK (DFFR_X1)
+     2    6.721    0.011    0.101    0.359 v id_ex_sel_b[2]$_DFF_PN0_/Q (DFFR_X1)
+     9   24.128    0.009    0.032    0.391 v place1006/Z (BUF_X4)
+     1    3.493    0.025    0.044    0.435 ^ _09457_/ZN (AOI22_X2)
+     2    3.348    0.012    0.025    0.460 v _09460_/ZN (NAND3_X2)
+     2    4.619    0.017    0.112    0.572 v _09461_/ZN (OR4_X2)
+     3    4.556    0.015    0.093    0.666 v _09485_/ZN (OR4_X4)
+     2    3.106    0.009    0.049    0.715 v _09486_/ZN (OR2_X2)
+     3    5.208    0.009    0.033    0.748 v place657/Z (BUF_X1)
+     1    2.806    0.023    0.032    0.780 ^ _09807_/ZN (OAI21_X1)
+     1    3.730    0.028    0.047    0.827 ^ _09808_/ZN (XNOR2_X1)
+     2    4.906    0.036    0.066    0.894 ^ _15282_/S (HA_X1)
+     4   11.600    0.013    0.020    0.914 v _11737_/ZN (INV_X2)
+     3    6.927    0.028    0.049    0.963 ^ _11740_/ZN (NOR3_X4)
+     2    3.370    0.017    0.028    0.991 v _11749_/ZN (AOI221_X2)
+     2    4.790    0.008    0.036    1.028 v place643/Z (BUF_X1)
+     3    6.752    0.041    0.032    1.060 ^ _11867_/ZN (OAI21_X1)
+     1    2.121    0.010    0.041    1.101 ^ _11893_/ZN (AND2_X1)
+     1    2.653    0.009    0.016    1.117 v _11894_/ZN (AOI21_X1)
+     1    1.976    0.017    0.056    1.172 v _11895_/Z (XOR2_X1)
+     1    1.467    0.032    0.034    1.206 ^ _11900_/ZN (OAI22_X1)
+                   0.032    0.000    1.206 ^ ex_mem_alu_result[27]$_DFF_PN0_/D (DFFR_X1)
+                                     1.206   data arrival time
+
+                            1.000    1.000   clock core_clock (rise edge)
+                            0.251    1.251   clock network delay (propagated)
+                            0.000    1.251   clock reconvergence pessimism
+                                     1.251 ^ ex_mem_alu_result[27]$_DFF_PN0_/CK (DFFR_X1)
+                           -0.037    1.215   library setup time
+                                     1.215   data required time
+---------------------------------------------------------------------------------
+                                     1.215   data required time
+                                    -1.206   data arrival time
+---------------------------------------------------------------------------------
+                                     0.008   slack (MET)
+
+
+=== ZERO WIRE RC (placement estimate with R=C=0)
+Startpoint: id_ex_sel_b[2]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: ex_mem_alu_result[27]$_DFF_PN0_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.258    0.258   clock network delay (propagated)
+                   0.023    0.000    0.258 ^ id_ex_sel_b[2]$_DFF_PN0_/CK (DFFR_X1)
+     2    6.721    0.011    0.101    0.359 v id_ex_sel_b[2]$_DFF_PN0_/Q (DFFR_X1)
+     9   24.128    0.009    0.032    0.391 v place1006/Z (BUF_X4)
+     1    3.493    0.025    0.044    0.435 ^ _09457_/ZN (AOI22_X2)
+     2    3.348    0.012    0.025    0.460 v _09460_/ZN (NAND3_X2)
+     2    4.619    0.017    0.112    0.572 v _09461_/ZN (OR4_X2)
+     3    4.556    0.015    0.093    0.666 v _09485_/ZN (OR4_X4)
+     2    3.106    0.009    0.049    0.715 v _09486_/ZN (OR2_X2)
+     3    5.208    0.009    0.033    0.748 v place657/Z (BUF_X1)
+     1    2.806    0.023    0.032    0.780 ^ _09807_/ZN (OAI21_X1)
+     1    3.730    0.028    0.047    0.827 ^ _09808_/ZN (XNOR2_X1)
+     2    4.906    0.036    0.066    0.894 ^ _15282_/S (HA_X1)
+     4   11.600    0.013    0.020    0.914 v _11737_/ZN (INV_X2)
+     3    6.927    0.028    0.049    0.963 ^ _11740_/ZN (NOR3_X4)
+     2    3.370    0.017    0.028    0.991 v _11749_/ZN (AOI221_X2)
+     2    4.790    0.008    0.036    1.028 v place643/Z (BUF_X1)
+     3    6.752    0.041    0.032    1.060 ^ _11867_/ZN (OAI21_X1)
+     1    2.121    0.010    0.041    1.101 ^ _11893_/ZN (AND2_X1)
+     1    2.653    0.009    0.016    1.117 v _11894_/ZN (AOI21_X1)
+     1    1.976    0.017    0.056    1.172 v _11895_/Z (XOR2_X1)
+     1    1.467    0.032    0.034    1.206 ^ _11900_/ZN (OAI22_X1)
+                   0.032    0.000    1.206 ^ ex_mem_alu_result[27]$_DFF_PN0_/D (DFFR_X1)
+                                     1.206   data arrival time
+
+                            1.000    1.000   clock core_clock (rise edge)
+                            0.251    1.251   clock network delay (propagated)
+                            0.000    1.251   clock reconvergence pessimism
+                                     1.251 ^ ex_mem_alu_result[27]$_DFF_PN0_/CK (DFFR_X1)
+                           -0.037    1.215   library setup time
+                                     1.215   data required time
+---------------------------------------------------------------------------------
+                                     1.215   data required time
+                                    -1.206   data arrival time
+---------------------------------------------------------------------------------
+                                     0.008   slack (MET)
+
+

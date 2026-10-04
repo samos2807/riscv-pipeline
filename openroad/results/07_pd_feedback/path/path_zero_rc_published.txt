@@ -1,0 +1,128 @@
+PZ_TAG published
+Startpoint: mem_wb_rd[1]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_pc.pc_out[20]$_DFFE_PN0N_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.137    0.137   clock network delay (propagated)
+                   0.019    0.000    0.137 ^ mem_wb_rd[1]$_DFF_PN0_/CK (DFFR_X1)
+     5   15.071    0.038    0.138    0.275 ^ mem_wb_rd[1]$_DFF_PN0_/Q (DFFR_X1)
+     2    4.587    0.009    0.030    0.304 ^ rebuffer1599/Z (BUF_X2)
+     2    4.167    0.007    0.024    0.329 ^ _14033_/ZN (OR4_X4)
+     1    3.004    0.017    0.025    0.354 v _14034_/ZN (OAI221_X2)
+     4   13.191    0.007    0.032    0.385 v rebuffer1632/Z (BUF_X4)
+     2    6.503    0.016    0.022    0.407 ^ _14130_/ZN (NOR2_X4)
+     1    0.900    0.008    0.013    0.420 v _14157_/ZN (OAI21_X2)
+     2    1.775    0.010    0.058    0.478 v _14158_/Z (MUX2_X1)
+     2    3.819    0.012    0.064    0.542 v _14160_/Z (MUX2_X1)
+     2    4.422    0.009    0.016    0.557 ^ _14161_/ZN (INV_X2)
+     2    4.226    0.014    0.038    0.595 ^ _24559_/CO (HA_X1)
+     2    5.988    0.006    0.011    0.606 v _14226_/ZN (INV_X2)
+     1    3.010    0.022    0.026    0.632 ^ _14227_/ZN (NOR3_X4)
+     4   10.829    0.014    0.054    0.686 ^ _14228_/ZN (AND4_X4)
+     3   11.164    0.012    0.043    0.729 ^ _14229_/ZN (AND3_X4)
+     1    4.235    0.015    0.013    0.742 v _14230_/ZN (AOI21_X4)
+     1    3.342    0.011    0.053    0.795 v _14231_/Z (XOR2_X2)
+     1    1.589    0.011    0.056    0.852 v _24554_/S (HA_X1)
+     3    7.814    0.008    0.031    0.882 v rebuffer1883/Z (BUF_X2)
+     2    2.465    0.005    0.024    0.906 v rebuffer1625/Z (BUF_X2)
+     1    3.159    0.005    0.023    0.930 v rebuffer1620/Z (BUF_X2)
+     2    3.842    0.006    0.029    0.959 v _14548_/ZN (AND4_X4)
+     3    5.156    0.048    0.083    1.042 ^ _14560_/ZN (AOI221_X2)
+     1    3.181    0.009    0.039    1.081 ^ _14561_/ZN (AND2_X2)
+     5    9.686    0.015    0.025    1.105 v _14574_/ZN (OAI21_X2)
+     1    5.800    0.008    0.043    1.148 v _14760_/ZN (AND4_X2)
+     2    5.522    0.040    0.078    1.226 ^ _14761_/ZN (NOR4_X4)
+     1    5.293    0.024    0.039    1.265 v _17451_/ZN (NAND4_X2)
+     1    5.905    0.041    0.068    1.333 ^ _17453_/ZN (NOR4_X4)
+     2    9.342    0.020    0.039    1.373 v _17455_/ZN (NAND4_X4)
+     3   16.572    0.027    0.045    1.418 ^ _17456_/ZN (NOR2_X4)
+     1   12.411    0.010    0.029    1.447 ^ rebuffer1882/Z (BUF_X4)
+    33   55.540    0.011    0.027    1.474 ^ place1051/Z (BUF_X16)
+     1    1.433    0.010    0.058    1.531 v _20374_/Z (MUX2_X1)
+     1    1.128    0.022    0.033    1.564 ^ _20377_/ZN (AOI22_X1)
+                   0.022    0.000    1.564 ^ u_pc.pc_out[20]$_DFFE_PN0N_/D (DFFR_X1)
+                                     1.564   data arrival time
+
+                            1.550    1.550   clock core_clock (rise edge)
+                            0.136    1.686   clock network delay (propagated)
+                            0.000    1.686   clock reconvergence pessimism
+                                     1.686 ^ u_pc.pc_out[20]$_DFFE_PN0N_/CK (DFFR_X1)
+                           -0.035    1.652   library setup time
+                                     1.652   data required time
+---------------------------------------------------------------------------------
+                                     1.652   data required time
+                                    -1.564   data arrival time
+---------------------------------------------------------------------------------
+                                     0.087   slack (MET)
+
+
+=== same endpoint/startpoint as the SPEF path, forced:
+Startpoint: mem_wb_rd[1]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_pc.pc_out[20]$_DFFE_PN0N_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock core_clock (rise edge)
+                            0.137    0.137   clock network delay (propagated)
+                   0.019    0.000    0.137 ^ mem_wb_rd[1]$_DFF_PN0_/CK (DFFR_X1)
+     5   15.071    0.038    0.138    0.275 ^ mem_wb_rd[1]$_DFF_PN0_/Q (DFFR_X1)
+     2    4.587    0.009    0.030    0.304 ^ rebuffer1599/Z (BUF_X2)
+     2    4.167    0.007    0.024    0.329 ^ _14033_/ZN (OR4_X4)
+     1    3.004    0.017    0.025    0.354 v _14034_/ZN (OAI221_X2)
+     4   13.191    0.007    0.032    0.385 v rebuffer1632/Z (BUF_X4)
+     2    6.503    0.016    0.022    0.407 ^ _14130_/ZN (NOR2_X4)
+     1    0.900    0.008    0.013    0.420 v _14157_/ZN (OAI21_X2)
+     2    1.775    0.010    0.058    0.478 v _14158_/Z (MUX2_X1)
+     2    3.819    0.012    0.064    0.542 v _14160_/Z (MUX2_X1)
+     2    4.422    0.009    0.016    0.557 ^ _14161_/ZN (INV_X2)
+     2    4.226    0.014    0.038    0.595 ^ _24559_/CO (HA_X1)
+     2    5.988    0.006    0.011    0.606 v _14226_/ZN (INV_X2)
+     1    3.010    0.022    0.026    0.632 ^ _14227_/ZN (NOR3_X4)
+     4   10.829    0.014    0.054    0.686 ^ _14228_/ZN (AND4_X4)
+     3   11.164    0.012    0.043    0.729 ^ _14229_/ZN (AND3_X4)
+     1    4.235    0.015    0.013    0.742 v _14230_/ZN (AOI21_X4)
+     1    3.342    0.011    0.053    0.795 v _14231_/Z (XOR2_X2)
+     1    1.589    0.011    0.056    0.852 v _24554_/S (HA_X1)
+     3    7.814    0.008    0.031    0.882 v rebuffer1883/Z (BUF_X2)
+     2    2.465    0.005    0.024    0.906 v rebuffer1625/Z (BUF_X2)
+     1    3.159    0.005    0.023    0.930 v rebuffer1620/Z (BUF_X2)
+     2    3.842    0.006    0.029    0.959 v _14548_/ZN (AND4_X4)
+     3    5.156    0.048    0.083    1.042 ^ _14560_/ZN (AOI221_X2)
+     1    3.181    0.009    0.039    1.081 ^ _14561_/ZN (AND2_X2)
+     5    9.686    0.015    0.025    1.105 v _14574_/ZN (OAI21_X2)
+     1    5.800    0.008    0.043    1.148 v _14760_/ZN (AND4_X2)
+     2    5.522    0.040    0.078    1.226 ^ _14761_/ZN (NOR4_X4)
+     1    5.293    0.024    0.039    1.265 v _17451_/ZN (NAND4_X2)
+     1    5.905    0.041    0.068    1.333 ^ _17453_/ZN (NOR4_X4)
+     2    9.342    0.020    0.039    1.373 v _17455_/ZN (NAND4_X4)
+     3   16.572    0.027    0.045    1.418 ^ _17456_/ZN (NOR2_X4)
+     1   12.411    0.010    0.029    1.447 ^ rebuffer1882/Z (BUF_X4)
+    33   55.540    0.011    0.027    1.474 ^ place1051/Z (BUF_X16)
+     1    1.433    0.010    0.058    1.531 v _20374_/Z (MUX2_X1)
+     1    1.128    0.022    0.033    1.564 ^ _20377_/ZN (AOI22_X1)
+                   0.022    0.000    1.564 ^ u_pc.pc_out[20]$_DFFE_PN0N_/D (DFFR_X1)
+                                     1.564   data arrival time
+
+                            1.550    1.550   clock core_clock (rise edge)
+                            0.136    1.686   clock network delay (propagated)
+                            0.000    1.686   clock reconvergence pessimism
+                                     1.686 ^ u_pc.pc_out[20]$_DFFE_PN0N_/CK (DFFR_X1)
+                           -0.035    1.652   library setup time
+                                     1.652   data required time
+---------------------------------------------------------------------------------
+                                     1.652   data required time
+                                    -1.564   data arrival time
+---------------------------------------------------------------------------------
+                                     0.087   slack (MET)
+
+
