@@ -15,7 +15,8 @@ two complete physical design flows:
 | standard-cell area | 32,808 µm² | **24,931 µm²** (−24.0 %) |
 | die (DEF units are 2000 per µm) | 208.4 × 208.4 µm | 177.5 × 177.5 µm (−27.4 %) |
 | post-route utilization | 77 % | 81 % |
-| instances (no fill) | 10,444 | 6,570 |
+| instances (no fill / tap, from the ODB) | 13,890 | 10,553 |
+| leakage / dynamic @ 1.55 ns | 0.57 / 25.9 mW | 0.49 / 15.9 mW ([power split](openroad/results/06_final/POWER_SPLIT.md)) |
 | power (default activity) | 26.5 mW @ 648 MHz | **21.1 mW @ 1008 MHz** (−20.4 %) |
 | energy per cycle | 40.9 pJ | 20.9 pJ (−49 %) |
 | setup / hold / max-cap / slew / fanout violations | 0 / 0 / 0 / 0 / 0 | 0 / 0 / 0 / 0 / 0 |
