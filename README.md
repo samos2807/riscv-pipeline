@@ -22,6 +22,8 @@ two complete physical design flows:
 | setup / hold / max-cap / slew / fanout violations | 0 / 0 / 0 / 0 / 0 | 0 / 0 / 0 / 0 / 0 |
 | flip-flops | 3,446 | 3,413 + 95 clock gaters |
 
+![published RTL at 648 MHz and reworked RTL at 1008 MHz, same scale](openroad/images/side_by_side_same_scale.png)
+
 Every RTL change was verified against an independent reference model on a hazard
 regression and 100 random programs, on the published RTL and on the final RTL
 (303 runs, 0 failures, see [verif/RESULTS.md](verif/RESULTS.md)).
