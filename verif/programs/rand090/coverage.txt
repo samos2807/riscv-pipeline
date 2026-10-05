@@ -1,0 +1,5 @@
+fwd_taken 5
+fwd_not 5
+bwd_taken 5
+bwd_not 3
+load_use 1

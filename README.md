@@ -77,7 +77,7 @@ No architectural change: same 5-stage pipeline, same forwarding paths, same ISA.
 the way the logic is implemented may change. One exception, disclosed: round 1 adds a
 static backward-taken / forward-not-taken branch predictor and registers the branch
 redirect, which changes the mispredict penalty from 2 to 3 cycles. Cycle counts were
-compared on one program only, the backward-branch loop of `tb/riscv_pipe_tb.v`: 111
+compared on one program only, the backward-branch loop of `tb/riscv_pipe_tb.v` (LOOP_PROG mode): 111
 cycles on the published RTL, 92 after round 1. No CPI measurement over a wider workload.
 
 ### The method
@@ -181,8 +181,9 @@ verif/               reference-model regression (testbench, generator, results)
 openroad/configs/    ORFS config + SDC per round
 openroad/scripts/    sweep / tighten drivers
 openroad/results/    CSVs and post-route 6_finish.rpt reports per round
-openroad/images/     layouts at the same scale, critical path, clock tree
-tb/ scripts/ picture/   Part 1 testbenches, Cadence scripts, Cadence screenshots
+openroad/images/     layouts at the same scale, critical path, clock tree, tables
+layout/              final GDS, DEF, gate-level netlist and SDC of the 1 GHz point
+tb/ scripts/ picture/   Part 1 testbenches, Cadence scripts, Cadence screenshots; tb/riscv_pipe_tb.v = the loop bench used for the 111 -> 92 cycle count
 ```
 
 Reproduce: see [openroad/README.md](openroad/README.md).
