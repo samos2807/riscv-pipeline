@@ -1,0 +1,289 @@
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_1_grt global_route
+Running global_route.tcl, stage 5_1_grt
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_db ./results/nangate45/riscv_crit/base/4_cts.odb
+read_sdc ./results/nangate45/riscv_crit/base/4_cts.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+source /rtl/orfs/pre_grt_crit_ndr.tcl
+crit-ndr: found rule CTS_NDR_0
+crit-ndr: rule CTS_NDR_0 assigned to 19 critical-path nets
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                2000
+Number of layers:     21
+Number of macros:     135
+Number of vias:       33
+Number of viarulegen: 19
+
+[INFO DRT-0150] Reading design.
+
+Design:                   riscv_core
+Die area:                 ( 0 0 ) ( 354980 354980 )
+Number of track patterns: 20
+Number of DEF vias:       0
+Number of components:     10753
+Number of terminals:      100
+Number of snets:          2
+Number of nets:           13738
+
+[INFO DRT-0167] List of default vias:
+  Layer via2
+    default via: via2_5
+  Layer via3
+    default via: via3_2
+  Layer via4
+    default via: via4_0
+  Layer via5
+    default via: via5_0
+  Layer via6
+    default via: via6_0
+  Layer via7
+    default via: via7_0
+  Layer via8
+    default via: via8_0
+  Layer via9
+    default via: via9_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 124.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete active.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete metal1.
+[INFO DRT-0024]   Complete via1.
+[INFO DRT-0024]   Complete metal2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete metal3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete metal4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete metal5.
+[INFO DRT-0024]   Complete via5.
+[INFO DRT-0024]   Complete metal6.
+[INFO DRT-0024]   Complete via6.
+[INFO DRT-0024]   Complete metal7.
+[INFO DRT-0024]   Complete via7.
+[INFO DRT-0024]   Complete metal8.
+[INFO DRT-0024]   Complete via8.
+[INFO DRT-0024]   Complete metal9.
+[INFO DRT-0024]   Complete via9.
+[INFO DRT-0024]   Complete metal10.
+[INFO DRT-0033] active shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] metal1 shape region query size = 255883.
+[INFO DRT-0033] via1 shape region query size = 1323.
+[INFO DRT-0033] metal2 shape region query size = 882.
+[INFO DRT-0033] via2 shape region query size = 1323.
+[INFO DRT-0033] metal3 shape region query size = 882.
+[INFO DRT-0033] via3 shape region query size = 1323.
+[INFO DRT-0033] metal4 shape region query size = 490.
+[INFO DRT-0033] via4 shape region query size = 420.
+[INFO DRT-0033] metal5 shape region query size = 142.
+[INFO DRT-0033] via5 shape region query size = 420.
+[INFO DRT-0033] metal6 shape region query size = 124.
+[INFO DRT-0033] via6 shape region query size = 168.
+[INFO DRT-0033] metal7 shape region query size = 66.
+[INFO DRT-0033] via7 shape region query size = 0.
+[INFO DRT-0033] metal8 shape region query size = 0.
+[INFO DRT-0033] via8 shape region query size = 0.
+[INFO DRT-0033] metal9 shape region query size = 0.
+[INFO DRT-0033] via9 shape region query size = 0.
+[INFO DRT-0033] metal10 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 728 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 124 unique inst patterns.
+[INFO DRT-0084]   Complete 3792 groups.
+#scanned instances     = 10753
+#unique  instances     = 124
+#stdCellGenAp          = 4174
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 2893
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 40058
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:05:12, elapsed time = 00:00:41, memory = 153.77 (MB), peak = 158.63 (MB)
+Took 41 seconds: pin_access
+global_route -congestion_report_file ./reports/nangate45/riscv_crit/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 624 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 65
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical        55632         26169          52.96%
+metal3     Horizontal      76883         37706          50.96%
+metal4     Vertical        37698         26657          29.29%
+metal5     Horizontal      38443         27087          29.54%
+metal6     Vertical        38574         27203          29.48%
+metal7     Horizontal      11773          8357          29.02%
+metal8     Vertical        13481          9699          28.05%
+metal9     Horizontal       6710          3782          43.64%
+metal10    Vertical         6710          3782          43.64%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0102] Start extra iteration 4/30
+[INFO GRT-0102] Start extra iteration 5/30
+[INFO GRT-0102] Start extra iteration 6/30
+[INFO GRT-0102] Start extra iteration 7/30
+[INFO GRT-0102] Start extra iteration 8/30
+[INFO GRT-0102] Start extra iteration 9/30
+[INFO GRT-0102] Start extra iteration 10/30
+[INFO GRT-0102] Start extra iteration 11/30
+[INFO GRT-0102] Start extra iteration 12/30
+[INFO GRT-0102] Start extra iteration 13/30
+[INFO GRT-0102] Start extra iteration 14/30
+[INFO GRT-0102] Start extra iteration 15/30
+[INFO GRT-0102] Start extra iteration 16/30
+[INFO GRT-0102] Start extra iteration 17/30
+[INFO GRT-0102] Start extra iteration 18/30
+[INFO GRT-0102] Start extra iteration 19/30
+[INFO GRT-0102] Start extra iteration 20/30
+[INFO GRT-0102] Start extra iteration 21/30
+[INFO GRT-0102] Start extra iteration 22/30
+[INFO GRT-0102] Start extra iteration 23/30
+[INFO GRT-0102] Start extra iteration 24/30
+[INFO GRT-0102] Start extra iteration 25/30
+[INFO GRT-0102] Start extra iteration 26/30
+[INFO GRT-0102] Start extra iteration 27/30
+[INFO GRT-0102] Start extra iteration 28/30
+[INFO GRT-0102] Start extra iteration 29/30
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[12\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[44\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[56\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[21\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[59\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[45\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[38\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[63\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[1\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[6\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[3\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[0\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[50\].u_icg.gck
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0102] Start extra iteration 4/30
+[INFO GRT-0102] Start extra iteration 5/30
+[INFO GRT-0102] Start extra iteration 6/30
+[INFO GRT-0102] Start extra iteration 7/30
+[INFO GRT-0102] Start extra iteration 8/30
+[INFO GRT-0102] Start extra iteration 9/30
+[INFO GRT-0102] Start extra iteration 10/30
+[INFO GRT-0102] Start extra iteration 11/30
+[INFO GRT-0102] Start extra iteration 12/30
+[INFO GRT-0102] Start extra iteration 13/30
+[INFO GRT-0102] Start extra iteration 14/30
+[INFO GRT-0102] Start extra iteration 15/30
+[INFO GRT-0102] Start extra iteration 16/30
+[INFO GRT-0102] Start extra iteration 17/30
+[INFO GRT-0102] Start extra iteration 18/30
+[INFO GRT-0102] Start extra iteration 19/30
+[INFO GRT-0102] Start extra iteration 20/30
+[INFO GRT-0102] Start extra iteration 21/30
+[INFO GRT-0102] Start extra iteration 22/30
+[INFO GRT-0102] Start extra iteration 23/30
+[INFO GRT-0102] Start extra iteration 24/30
+[INFO GRT-0102] Start extra iteration 25/30
+[INFO GRT-0102] Start extra iteration 26/30
+[INFO GRT-0102] Start extra iteration 27/30
+[INFO GRT-0102] Start extra iteration 28/30
+[INFO GRT-0102] Start extra iteration 29/30
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[14\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[15\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[39\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[19\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[4\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[35\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[20\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[51\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[10\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[46\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[2\].u_icg.gck
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[41\].u_icg.gck
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0102] Start extra iteration 4/30
+[INFO GRT-0102] Start extra iteration 5/30
+[INFO GRT-0102] Start extra iteration 6/30
+[INFO GRT-0102] Start extra iteration 7/30
+[INFO GRT-0102] Start extra iteration 8/30
+[INFO GRT-0102] Start extra iteration 9/30
+[INFO GRT-0102] Start extra iteration 10/30
+[INFO GRT-0102] Start extra iteration 11/30
+[INFO GRT-0102] Start extra iteration 12/30
+[INFO GRT-0102] Start extra iteration 13/30
+[INFO GRT-0197] Via related to pin nodes: 78187
+[INFO GRT-0198] Via related Steiner nodes: 4304
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 114950
+[INFO GRT-0112] Final usage 3D: 437763
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2           26169         19260           73.60%             0 /  0 /  0
+metal3           37706         27120           71.92%             0 /  0 /  0
+metal4           26657         14477           54.31%             0 /  0 /  0
+metal5           27087         14466           53.41%             0 /  0 /  0
+metal6           27203         10449           38.41%             0 /  0 /  0
+metal7            8357          3268           39.10%             0 /  0 /  0
+metal8            9699          2379           24.53%             0 /  0 /  0
+metal9            3782           966           25.54%             0 /  0 /  0
+metal10           3782           528           13.96%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           170442         92913           54.51%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 362038 um
+[INFO GRT-0014] Routed nets: 10354
+[INFO GRT-0303] Global routing runtime = 00:00:25
+Took 26 seconds: global_route -congestion_report_file ./reports/nangate45/riscv_crit/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose -cap_margin 30
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     13992
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: clknet_0_u_dmem.g_row\[37\].u_icg.gck
+     1000 |     +0.0% |       3 |       4 |             8 |     12992
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: u_dmem.g_row\[38\].u_icg.gck
+[WARNING RSZ-0104] Net _09351_ only has one pin. Check if it is intended to be dangling.
+[WARNING GRT-0273] Disabled NDR (to reduce congestion) for net: u_dmem.g_row\[26\].u_icg.gck
+[ERROR GRT-0183] Net clknet_0_u_dmem.g_row\[8\].u_icg.gck: heap underflow during 3D maze routing.
+Error: global_route.tcl, 125 GRT-0183
+Elapsed time: 1:19.40[h:]min:sec. CPU time: user 374.51 sys 14.94 (490%). Peak memory: 502424KB.
+make[1]: *** [Makefile:552: do-5_1_grt] Error 1
+make: *** [Makefile:552: results/nangate45/riscv_crit/base/5_1_grt.odb] Error 2
+rc=2 runtime=81s

@@ -1,0 +1,69 @@
+OpenROAD 26Q2-667-gc5dc64a761 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_db ./results/nangate45/riscv_final/base/6_1_fill.odb
+read_sdc ./results/nangate45/riscv_final/base/6_1_fill.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+write_db ./results/nangate45/riscv_final/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation riscv_core (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 52003 rc segments
+[INFO RCX-0439] Coupling Cap extraction riscv_core ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 47% of 109743 wires extracted
+[INFO RCX-0442] 100% of 109743 wires extracted
+[INFO RCX-0045] Extract 13851 nets, 62470 rsegs, 62470 caps, 182254 ccs
+[INFO RCX-0443] 13851 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 2.11e-02 W
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: 1.09e+00 V
+Average voltage  : 1.10e+00 V
+Average IR drop  : 3.51e-03 V
+Worstcase IR drop: 1.18e-02 V
+Percentage drop  : 1.08 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 2.11e-02 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.00e-02 V
+Average voltage  : 3.04e-03 V
+Average IR drop  : 3.04e-03 V
+Worstcase IR drop: 1.00e-02 V
+Percentage drop  : 0.91 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                              5687    5725.38
+  Tap cell                                313      83.26
+  Clock buffer                            615     771.67
+  Timing Repair Buffer                    958     956.54
+  Inverter                                351     187.80
+  Clock inverter                          167     111.72
+  Clock gate cell                          95     328.51
+  Sequential cell                        3413   15736.03
+  Multi-Input combinational cell         4954    6755.60
+  Total                                 16553   30656.50
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 24931 um^2 81% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 0:18.20[h:]min:sec. CPU time: user 20.30 sys 3.76 (132%). Peak memory: 451316KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                          18            440                  N/A

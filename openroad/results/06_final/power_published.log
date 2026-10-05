@@ -1,0 +1,26 @@
+PS_TAG published insts 13890 flops 3446 icg 0 buffers 1150
+Design area 32808 um^2 77% utilization.
+PS_PERIOD published 1.55
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.59e-02   3.38e-04   2.65e-04   1.65e-02  62.5%
+Combinational          1.60e-03   2.57e-03   3.00e-04   4.47e-03  16.9%
+Clock                  1.50e-03   3.96e-03   7.02e-06   5.46e-03  20.6%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.90e-02   6.86e-03   5.72e-04   2.65e-02 100.0%
+                          71.9%      25.9%       2.2%
+PS_PERIOD published 1.00
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.43e-02   3.84e-04   2.65e-04   2.50e-02  65.6%
+Combinational          1.67e-03   2.69e-03   3.00e-04   4.67e-03  12.2%
+Clock                  2.32e-03   6.14e-03   7.02e-06   8.46e-03  22.2%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.83e-02   9.21e-03   5.72e-04   3.81e-02 100.0%
+                          74.3%      24.2%       1.5%
