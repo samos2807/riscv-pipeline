@@ -27,3 +27,8 @@ innovus_temp_*
 # OS
 .DS_Store
 Thumbs.db
+
+# Part 2 artifacts that the rules above would hide
+!openroad/results/**/*.log
+!verif/programs/**/*.log
+!layout/*.gds
